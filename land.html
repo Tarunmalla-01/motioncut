@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Landing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #383738;
+            color: #333;
+        }
+
+        header {
+            background-color:  #242323;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .pricing-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            width: 300px;
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.20); /* Hover effect for scaling the card */
+        }
+
+        .pricing-card h2 {
+            color: #333;
+        }
+
+        .pricing-card p {
+            color: #666;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #9909f1;
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Pricing Plans</h1>
+    </header>
+
+    <div class="pricing-container">
+        <div class="pricing-card">
+            <h2>Basic</h2>
+            <p class="price" data-price="10">$10/month</p>
+            <p>Some features included</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Pro</h2>
+            <p class="price" data-price="20">$20/month</p>
+            <p>All features included</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card">
+            <h2>Premium</h2>
+            <p class="price" data-price="30">$30/month</p>
+            <p>Premium features included</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const prices = document.querySelectorAll('.price');
+
+            prices.forEach(price => {
+                price.addEventListener('mouseover', function () {
+                    this.style.color = '#ff6600'; // Change the color on hover
+                });
+
+                price.addEventListener('mouseout', function () {
+                    this.style.color = '#333'; // Revert to the original color
+                });
+
+                price.addEventListener('click', function () {
+                    // You can add logic here to handle the click event, e.g., open a modal or update the UI
+                    alert(`Selected plan: ${this.parentNode.querySelector('h2').textContent}`);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
