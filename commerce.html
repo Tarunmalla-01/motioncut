@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:black;
+            padding: 20px;
+            color: white;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Main styles */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Product styles */
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .product h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My E-commerce Store</h1>
+    </header>
+
+    <main>
+        <section class="product">
+            <img src="https://www.stylesgap.com/wp-content/uploads/2016/06/Eden-Robe-Men-Party-Wear-Formal-Coat-Pant-Suits-Collection-3.jpg" alt="Formals">
+            <h2>Formals</h2>
+            <p>Your Personality can be estimated by Your Sense of clothing.Making a strong first impression is paramount, especially in professional settings. It's imperative to project an image of professionalism and competence, particularly when interacting with superiors. </p>
+            <p>Price: $193.81</p>
+            <button id="add-to-cart-btn">Add to Cart</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My E-commerce Store</p>
+    </footer>
+
+    <script>
+        document.getElementById("add-to-cart-btn").addEventListener("click", function() {
+            alert("Product added to cart!");
+        });
+    </script>
+</body>
+</html>
